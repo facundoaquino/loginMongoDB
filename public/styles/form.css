@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	/* background: #0f0c29;  
+	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+	background: linear-gradient(
+		to right,
+		#24243e,
+		#302b63,
+		#0f0c29
+	);   */
+	position: relative;
+	min-height: 100vh;
+	min-width: 100vw;
+	overflow: hidden;
+}
+
+.form__title {
+	color: white;
+	font-weight: 300;
+}
+
+form {
+	max-width: 300px;
+	margin: 10px auto;
+	color: white;
+	font-weight: 300;
+}
+
+.form__labelInputContainer {
+	display: flex;
+	flex-direction: column;
+	margin: 2rem 0;
+}
+.form__labelInputContainer > label {
+	margin-bottom: 1rem;
+	border-radius: 5px;
+}
+
+.form__labelInputContainer > input {
+	padding: 8px;
+	border-radius: 5px;
+	border: 0;
+	outline: none;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: rgb(27, 15, 61);
+}
+
+button {
+	padding: 10px;
+	background-color: #24243e;
+	color: white;
+	border: 0;
+	outline: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+}
+
+/*---------------------- remove styles of input number ---------------------*/
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/*---------------------- success ---------------------*/
+
+.success {
+	width: 50%;
+	font-weight: 600;
+	position: absolute;
+	background-color: aqua;
+	color: black;
+	box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.514);
+	top: 50%;
+	left: 50%;
+	font-size: calc(1vw + 10px);
+	transform: translate(-50%, -50%);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+/*---------------------- options/nav ---------------------*/
+
+.nav__container {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.nav {
+	font-size: 1.5rem;
+	color: rgb(56, 211, 211);
+}
+.options {
+	display: none;
+}
+
+.options > a {
+	text-decoration: none;
+	color: rgb(172, 163, 163);
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-top: 10px;
+	font-size: 15px;
+}
+
+.nav i {
+	cursor: pointer;
+	transition: transform 1s;
+}
+
+.options.active {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	animation: show 1s;
+}
+
+@keyframes show {
+	from {
+		transform: scale(0.3);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+#arrow.rotate {
+	transform: rotate(180deg);
+	transition: transform 1s;
+}
+
+
+
+
+
+.form__errorsBox{
+	display: flex;
+	flex-wrap: wrap;
+	font-weight: 100;
+	font-size: 12px;
+}
+
+.form__errorsBox i{
+color: rgb(240, 240, 52);
+}

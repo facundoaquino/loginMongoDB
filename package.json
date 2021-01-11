@@ -1,0 +1,25 @@
+{
+	"name": "newProject",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node src/app.js",
+		"dev": "nodemon src/app.js -e css,js,ejs,json"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bcrypt": "^5.0.0",
+		"cookie-parser": "^1.4.5",
+		"ejs": "^3.1.5",
+		"express": "^4.17.1",
+		"express-session": "^1.17.1",
+		"express-validator": "^6.9.0",
+		"method-override": "^3.0.0",
+		"moment": "^2.29.1",
+		"mongoose": "^5.11.8",
+		"validator": "^13.5.2"
+	}
+}

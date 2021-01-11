@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="/styles/form.css" />
+		<title>Formulario edicion</title>
+	</head>
+	<body>
+		<form action="/users/edit/<%=_id%>/?_method=PUT " method="POST">
+			<div class="form__container">
+				<div class="form__labelInputContainer">
+					<label for="name">Nombre</label>
+					<input type="text" name="name" id="name" value="<%=name%>" required autocomplete="off" />
+				</div>
+				<div class="form__labelInputContainer">
+					<label for="lastname">Apellido</label>
+					<input
+						type="text"
+						name="lastname"
+						id="lastname"
+						value="<%=lastname%>"
+						required
+						autocomplete="off"
+					/>
+				</div>
+				<div class="form__labelInputContainer">
+					<label for="age">Edad</label>
+					<input type="number" name="age" id="age" value="<%=age%>" required autocomplete="off" />
+				</div>
+				<div class="form__labelInputContainer">
+					<button type="submit">Editar</button>
+				</div>
+			</div>
+		</form>
+		<script src="https://kit.fontawesome.com/389c8e1dce.js" crossorigin="anonymous"></script>
+		<script src="js/success.js"></script>
+	</body>
+</html>
