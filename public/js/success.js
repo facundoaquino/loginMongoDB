@@ -4,4 +4,4 @@ const redirect = (path) => {
 	}, 2000)
 }
 
-window.onload = redirect('/form')
+window.onload = redirect('/')

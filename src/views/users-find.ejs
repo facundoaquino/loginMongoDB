@@ -13,21 +13,33 @@
 		<title>Formulario registro</title>
 	</head>
 	<body class="bg-dark">
-		<main class="main">
-			<section class="usersContainer">
-				<h3 class="text-primary">NOMBRE</h3>
-				<h3 class="text-primary">APELLIDO</h3>
-				<h3></h3>
-				 
-				<% usersFind.forEach(user=> {%>
+		 
 
-				<p><%=user.name%></p>
-				<p><%=user.lastname%></p>
-				 <a class="usersContainer__edit" href="/users/edit/<%=user["_id"]%> ">editar</a></p>
+
+		<table class="table  text-primary w-50  ">
+			<thead>
+			  <tr>
+				<th scope="col">#</th>
+				<th scope="col">First Name</th>
+				<th scope="col">Last Name</th>
+				<th scope="col">Handler</th>
+			  </tr>
+			</thead>
+			<tbody>
+			 
+			  <% usersFind.forEach((user,inx)=> {%>
+				<tr>
+					<th scope="row"><%=inx+1%></th>
+					<td><%=user.name%></td>
+					<td><%=user.lastname%></td>
+					<td><a class="usersContainer__edit btn btn-success" href="/users/edit/<%=user["_id"]%> ">editar</a></td>
+				  </tr>
+			 
 
 				<% }) %>
-			</section>
-		</main>
+			   
+			</tbody>
+		  </table>
 		<script src="https://kit.fontawesome.com/389c8e1dce.js" crossorigin="anonymous"></script>
 		<script src="assets/js/main.js"></script>
 	</body>
